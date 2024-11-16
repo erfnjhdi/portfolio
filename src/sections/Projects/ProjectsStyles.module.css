@@ -23,7 +23,7 @@
 }
 
 .projectsContainer {
-  padding-left: 160px;
+  padding-left: 135px;
   display: grid;
   grid-template-columns: repeat(3, 170px);
   align-items: center;
@@ -92,3 +92,13 @@
     padding: 0 30px;
   }
 }
+@media (width <= 1400px) {
+  .projectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
+}
+
