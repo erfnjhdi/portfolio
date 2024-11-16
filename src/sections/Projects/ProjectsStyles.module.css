@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  img {
+    max-width: 150px;
+    align-self: center;
+    background-color: var(--project-card-bg);
+    border-radius: 20px;
+  }
+
+  a {
+    width: fit-content;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 200ms ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+}
+
+.projectsContainer {
+  padding-left: 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 170px);
+  align-items: center;
+  gap: 100px;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--background-color); /* Updated to use theme variable */
+  color: var(--text-color); /* Updated to use theme variable */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 50px;
+    text-align: left;
+    line-height: 1.50;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button, .closeButton {
+  background-color: var(--btn-color); /* Updated to use theme variable */
+  color: var(--btn-text-color); /* Updated to use theme variable */
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.closeButton {
+  background-color: rgba(93, 85, 85, 0.305);
+  color: var(--text-color);
+}
+
+@media (width <= 800px) {
+  .projectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
+}
