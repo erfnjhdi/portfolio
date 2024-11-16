@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './ProjectsStyles.module.css';
 import alert from '../../assets/logo.png';
 import database from '../../assets/data.png';
-import banking from '../../assets/banking.png';
+import banking from '../../assets/Banking.png';
 import library from '../../assets/library2.png';
 import ProjectCard from '../../common/ProjectCard';
 import ProjectModal from '../Projects/ProjectModal';
